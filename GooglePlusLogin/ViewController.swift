@@ -24,7 +24,7 @@ class ViewController: UIViewController, GIDSignInUIDelegate, GIDSignInDelegate {
         
         gid_signinSharedInstance?.clientID = "599280904951-9usr5as4773rkimklle3o6a08q3tui4i.apps.googleusercontent.com"
         gid_signinSharedInstance?.delegate = self
-        gid_signinSharedInstance?.uiDelegate = self        
+        gid_signinSharedInstance?.uiDelegate = self
         
     }
     override var preferredStatusBarStyle: UIStatusBarStyle {
@@ -65,14 +65,13 @@ class ViewController: UIViewController, GIDSignInUIDelegate, GIDSignInDelegate {
             signOutButton.isHidden = true
             disconnectButton.isHidden = true
             statusLabel.text = "Google Sign in\niOS Demo"
-        }    
-        
-        
-        if user.profile.hasImage
-        {
-            let pic = user.profile.imageURL(withDimension: 100)
-            print(pic)
         }
+        
+        //        if user.profile.hasImage
+        //        {
+        //            let pic = user.profile.imageURL(withDimension: 100)
+        //            print(pic)
+        //        }
         
         
     }
@@ -81,13 +80,6 @@ class ViewController: UIViewController, GIDSignInUIDelegate, GIDSignInDelegate {
         print("logged out")
         
     }
-    //    func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldReceive touch: UITouch) -> Bool {
-    //        if touch.view is GIDSignInButton {
-    //            print("received touch")
-    //            return false
-    //        }
-    //        return true
-    //    }
     
     //UIButton Actions
     @IBAction func signOutButtonClicked(_ sender: Any) {
